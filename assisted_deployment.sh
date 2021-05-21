@@ -224,8 +224,13 @@ EOF
 
 }
 
+
+function patch_extra_host_manifests() {
+  sed -i s/"namespace: openshift-machine-api"/"namespace: ${ASSISTED_NAMESPACE}"/ ${EXTRA_BAREMETALHOSTS_FILE}
+}
+
 function install_assisted_service() {
- # Verify extra disks were created for the nodes
+ patch_extra_host_manifests
  deploy_local_storage
  deploy_hive
  deploy_assisted_operator
