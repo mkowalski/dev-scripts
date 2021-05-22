@@ -204,6 +204,9 @@ set -x
 # names delimited by spaces. Example "vdb vdc"
 # export VM_EXTRADISKS_LIST="vdb vdc"
 
+# Configure size of extra disks added to VMs
+# export VM_EXTRADISKS_SIZE="10G"
+
 # Provide additional master/worker ignition configuration, will be
 # merged with the installer provided config, can be used to modify
 # the default nic configuration etc
