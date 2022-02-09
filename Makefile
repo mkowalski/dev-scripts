@@ -65,3 +65,9 @@ assisted_deployment:
 
 assisted_deployment_requirements:
 	./assisted_deployment.sh install_prerequisites_assisted_service
+
+capi_deployment:
+	./capi_deployment.sh install_capi
+
+capi_deployment_cleanup:
+	./capi_deployment.sh delete_all
